@@ -1,1 +1,490 @@
-# loyal2children1
+# loyal2children1[index.html](https://github.com/user-attachments/files/22369311/index.html)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loyal2Children</title>
+<!-- Playful Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Comic Sans MS', 'Comic Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fffbe7 0%, #ffe3f7 100%);
+    color: #222;
+    position: relative;
+  }
+  header {
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 50%, #87ceeb 100%);
+    color: #fff;
+    padding: 30px 0 20px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  header h1 {
+    font-size: 3.2rem;
+    margin-bottom: 5px;
+    font-family: 'Fredoka', 'Comic Sans MS', 'Comic Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 8px rgba(0,0,0,0.18), 0 1px 0 #fff;
+    font-weight: 900;
+  }
+  header p { font-size: 1.2rem; }
+
+  nav {
+    background: linear-gradient(90deg, #ffb6c1 0%, #b19cd9 50%, #87ceeb 100%);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  nav a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.1rem;
+    padding: 4px 12px;
+    border-radius: 8px;
+  }
+  nav a:hover {
+    color: #fff200;
+    background: #ffb347;
+  }
+
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #ffe3f7 0%, #b3f0ff 100%);
+    border-bottom: 6px solid #ffb347;
+  }
+  .slides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 8px 32px rgba(255,179,71,0.12);
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255,255,255,0.7);
+    padding: 24px 30px;
+    border-radius: 18px;
+    color: #ff69b4;
+    box-shadow: 0 2px 12px rgba(135,206,235,0.18);
+  }
+  .hero-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #ffb347;
+    text-shadow: 1px 2px 8px #fffbe7;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #b19cd9;
+  }
+  .hero-text button {
+    background: linear-gradient(90deg, #ffb347 0%, #ff69b4 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s cubic-bezier(.68,-0.55,.27,1.55);
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255,179,71,0.18);
+  }
+  .hero-text button:hover {
+    background: linear-gradient(90deg, #ff69b4 0%, #ffb347 100%);
+    transform: scale(1.12) rotate(-3deg);
+  }
+
+  section {
+    padding: 56px 18px 48px 18px;
+    text-align: center;
+    max-width: 900px;
+    margin: 32px auto 32px auto;
+    background: linear-gradient(120deg, #fffbe7 80%, #ffe3f7 100%);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(255,179,71,0.13), 0 1.5px 0 #fffbe7;
+    border: 2px solid #ffb347;
+  }
+  section h3 {
+    color: #ff69b4;
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px 8px #fffbe7, 0 1.5px 0 #fff;
+    font-family: 'Fredoka', 'Comic Sans MS', 'Comic Sans', Arial, sans-serif;
+  }
+  section p {
+    color: #222;
+    margin-bottom: 20px;
+    font-size: 1.08rem;
+  }
+
+  .programs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .program-card {
+    background: linear-gradient(135deg, #fffbe7 0%, #ffe3f7 100%);
+    border-radius: 18px;
+    padding: 28px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 2px 12px rgba(255,179,71,0.10);
+    border: 2px solid #ffb347;
+    position: relative;
+  }
+  .program-card h4 {
+    color: #ff69b4;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-shadow: 1px 2px 8px #fffbe7;
+  }
+  .program-card p {
+    color: #222;
+    font-size: 1rem;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fffbe7;
+    border-radius: 12px;
+    padding: 24px 18px;
+    box-shadow: 0 2px 8px rgba(255,179,71,0.08);
+  }
+  input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ffb347;
+    width: 100%;
+    font-size: 1rem;
+    background: #fff;
+  }
+  button[type="submit"] {
+    background: linear-gradient(90deg, #ffb347 0%, #ff69b4 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255,179,71,0.18);
+    transition: background 0.3s;
+  }
+  button[type="submit"]:hover {
+    background: linear-gradient(90deg, #ff69b4 0%, #ffb347 100%);
+  }
+
+  footer {
+    background: linear-gradient(90deg, #b19cd9 0%, #ffb347 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 6px solid #ff69b4;
+    font-size: 1.1rem;
+  }
+  footer a {
+    color: #fff200;
+    margin: 0 10px;
+    font-weight: bold;
+    text-shadow: 1px 2px 8px #b19cd9;
+  }
+  footer a:hover {
+    text-decoration: underline;
+    color: #ff69b4;
+  }
+
+  /* Decorative stars */
+  .star {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/4/44/Plain_Yellow_Star.png') no-repeat center/contain;
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 10;
+    animation: floatStar 6s ease-in-out infinite alternate;
+  }
+  .star.star1 { top: 40px; left: 10vw; animation-delay: 0s; }
+  .star.star2 { top: 120px; right: 12vw; animation-delay: 1s; }
+  .star.star3 { top: 380px; left: 5vw; animation-delay: 2s; }
+  .star.star4 { top: 500px; right: 8vw; animation-delay: 3s; }
+  .star.star5 { top: 700px; left: 20vw; animation-delay: 4s; }
+  .star.star6 { top: 200px; left: 80vw; animation-delay: 2.5s; }
+  .star.star7 { top: 600px; right: 30vw; animation-delay: 1.5s; }
+  .star.star8 { top: 300px; left: 50vw; animation-delay: 3.5s; }
+
+  @keyframes floatStar {
+    0% { transform: translateY(0) scale(1) rotate(0deg); }
+    50% { transform: translateY(-18px) scale(1.1) rotate(10deg); }
+    100% { transform: translateY(0) scale(1) rotate(-10deg); }
+  }
+
+  .rainbow-bar {
+    width: 100vw;
+    height: 18px;
+    background: linear-gradient(90deg, #ffb347 0%, #ff69b4 20%, #b19cd9 40%, #87ceeb 60%, #fff200 80%, #ffb347 100%);
+    margin: 0 auto 18px auto;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 2px 8px rgba(255,179,71,0.12);
+  }
+
+  .rainbow-arc {
+    width: 100vw;
+    overflow: hidden;
+    margin: 0 auto -30px auto;
+    z-index: 5;
+    position: relative;
+  }
+
+  /* Confetti animation */
+  .confetti {
+    position: fixed;
+    top: -20px;
+    border-radius: 50%;
+    opacity: 0.85;
+    z-index: 9999;
+    pointer-events: none;
+    animation: confetti-fall 3.2s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+  }
+  @keyframes confetti-fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+  }
+
+  @media(max-width:768px) {
+    nav { flex-direction: column; }
+    .programs { flex-direction: column; align-items: center; }
+    .star { width: 20px; height: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Animated Floating Stars -->
+<div class="star star1"></div>
+<div class="star star2"></div>
+<div class="star star3"></div>
+<div class="star star4"></div>
+<div class="star star5"></div>
+<div class="star star6"></div>
+<div class="star star7"></div>
+<div class="star star8"></div>
+
+<!-- Rainbow Arc SVG Decoration -->
+<div class="rainbow-arc">
+  <svg width="100%" height="80" viewBox="0 0 900 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="450" cy="80" rx="440" ry="60" fill="url(#rainbowGradient)"/>
+  <defs>
+    <linearGradient id="rainbowGradient" x1="0" y1="80" x2="900" y2="80" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#ffb347"/>
+    <stop offset="0.2" stop-color="#ff69b4"/>
+    <stop offset="0.4" stop-color="#b19cd9"/>
+    <stop offset="0.6" stop-color="#87ceeb"/>
+    <stop offset="0.8" stop-color="#fff200"/>
+    <stop offset="1" stop-color="#ffb347"/>
+    </linearGradient>
+  </defs>
+  </svg>
+</div>
+
+<header>
+  <h1>Loyal2Children</h1>
+  <p>Empowering children through faith, education, and life skills</p>
+</header>
+
+<div class="rainbow-bar"></div>
+
+<nav>
+  <a href="#about">About Us</a>
+  <a href="#programs">Programs</a>
+  <a href="#get-involved">Get Involved</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero Slideshow -->
+<div class="slideshow-container">
+  <div class="slides">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Children playing outdoors">
+    <div class="hero-text">
+      <h2>Faith at the Center</h2>
+      <p>Guiding children with love, respect, and hope.</p>
+      <button onclick="window.location.href='#get-involved'">Get Involved</button>
+    </div>
+  </div>
+  <div class="slides">
+    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=900&q=80" alt="Community of children and families">
+    <div class="hero-text">
+      <h2>Mentorship that Matters</h2>
+      <p>Helping youth climb toward their future.</p>
+      <button onclick="window.location.href='#programs'">View Programs</button>
+    </div>
+  </div>
+  <div class="slides">
+    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=900&q=80" alt="Adult mentoring a child">
+    <div class="hero-text">
+      <h2>Building Future Leaders</h2>
+      <p>Supporting children through personal guidance.</p>
+      <button onclick="window.location.href='#about'">Learn About Us</button>
+    </div>
+  </div>
+  <div class="slides">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=80" alt="Mentor playing with child">
+    <div class="hero-text">
+      <h2>Hope in Action</h2>
+      <p>Empowering lives through faith-based connection.</p>
+            <button onclick="window.location.href='https://paypal.me/yourlink'">Donate Now</button>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <h3>About Us</h3>
+  <p>Loyal2Children is a faith-based nonprofit organization dedicated to nurturing the potential of children through education, mentorship, and community support.</p>
+  <p>Our mission is to guide children with love, respect, and intentionality, helping them build a foundation for success while instilling strong values of faith and integrity.</p>
+</section>
+
+<section id="programs">
+  <h3>Our Programs</h3>
+  <div class="programs">
+    <div class="program-card">
+      <h4>Climbing Toward My Future</h4>
+      <p><strong>Goal:</strong> Empower children to set and achieve academic, personal, and spiritual goals.<br>
+      <strong>Activities:</strong> One-on-one mentoring, goal-setting workshops, and progress tracking. Children are paired with mentors who help them identify their strengths, set realistic goals, and celebrate milestones.<br>
+      <strong>Outcomes:</strong> Improved academic performance, increased self-confidence, and a strong sense of purpose rooted in faith.</p>
+    </div>
+    <div class="program-card">
+      <h4>Youth Mentorship</h4>
+      <p><strong>Goal:</strong> Provide positive role models and guidance for youth as they navigate life’s challenges.<br>
+      <strong>Activities:</strong> Group mentoring sessions, leadership development, life skills training, and community service projects. Youth learn communication, teamwork, and decision-making skills in a supportive environment.<br>
+      <strong>Outcomes:</strong> Enhanced leadership abilities, better decision-making, and a supportive peer network.</p>
+    </div>
+    <div class="program-card">
+      <h4>Family Support</h4>
+      <p><strong>Goal:</strong> Strengthen families to create nurturing, faith-filled home environments.<br>
+      <strong>Activities:</strong> Parenting workshops, resource referrals, family counseling, and fun family events. We equip parents and caregivers with tools to support their children’s growth and well-being.<br>
+      <strong>Outcomes:</strong> Stronger family bonds, improved parenting skills, and resilient, thriving children.</p>
+    </div>
+  </div>
+</section>
+
+<section id="get-involved">
+  <h3>Get Involved</h3>
+  <p>Volunteer, donate, or partner with us to help children thrive and reach their full potential.</p>
+  <button onclick="window.location.href='https://paypal.me/yourlink'">Donate Now</button>
+</section>
+
+<section id="contact">
+  <h3>Contact Us</h3>
+  <p>Send us a message and we’ll respond as soon as possible.</p>
+  <form id="contactForm" action="https://formspree.io/f/mpwjgwvd" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <div id="thankYouMessage" style="display:none; color:green; font-weight:bold; margin-top:16px;">Thank you! Someone will reach out to you shortly.</div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Loyal2Children. All rights reserved.</p>
+  <p><a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+</footer>
+
+<script>
+  // Confetti animation on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const confettiColors = ['#ffb347', '#ff69b4', '#b19cd9', '#87ceeb', '#fff200'];
+    for (let i = 0; i < 60; i++) {
+    const conf = document.createElement('div');
+    conf.className = 'confetti';
+    conf.style.left = Math.random() * 100 + 'vw';
+    conf.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+    conf.style.animationDelay = (Math.random() * 1.5) + 's';
+    conf.style.width = conf.style.height = (Math.random() * 8 + 6) + 'px';
+    document.body.appendChild(conf);
+    setTimeout(() => conf.remove(), 3200);
+    }
+  });
+
+  // Slideshow
+  let slideIndex = 0;
+  showSlides();
+  function showSlides() {
+    let slides = document.getElementsByClassName("slides");
+    for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000);
+  }
+
+// Contact form thank you and redirect
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  const thankYou = document.getElementById('thankYouMessage');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          thankYou.style.display = 'block';
+          setTimeout(() => {
+            window.location.hash = '';
+          }, 2000);
+        } else {
+          return response.json().then(data => {
+            throw new Error(data.error || 'Submission failed');
+          });
+        }
+      })
+      .catch(() => {
+        thankYou.textContent = 'Sorry, there was a problem. Please try again later.';
+        thankYou.style.color = 'red';
+        thankYou.style.display = 'block';
+      });
+    });
+  }
+});
+</script>
+
+</body>
+</html>
